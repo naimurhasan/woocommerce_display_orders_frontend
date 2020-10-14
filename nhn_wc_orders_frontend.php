@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Display Woocommerce Orders in Front-end
+ * Plugin Name: Display WC Orders in Front-end
  * Plugin URI:  https://github.com/naimurhasan/woocommerce_display_orders_frontend
  * Description: Display Woocommerce Orders in Front-End by weblywork.com
  * Version: 1.0

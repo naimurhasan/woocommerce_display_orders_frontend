@@ -1,4 +1,4 @@
-=== WOOCOMMERCE WORDERS FRONT END ===
+=== DISPLAY WC WORDERS FRONT END ===
 Contributors: naimurhasanrwd
 Tags: woocommerce, display, orders, front-end, frontend
 Requires PHP: 7.0
