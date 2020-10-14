@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Display Woocommerce Orders in Front-end
- * Plugin URI:  https://github.com/naimurhasan/folder-to-category-link-wp-pluign/blob/master/README.md
+ * Plugin URI:  https://github.com/naimurhasan/woocommerce_display_orders_frontend
  * Description: One click Link folder with category of uploaded media
  * Version: 1.0
  * Author: WeblyWork
