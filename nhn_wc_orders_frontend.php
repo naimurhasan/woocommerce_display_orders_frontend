@@ -79,10 +79,14 @@ function show_orders_table($orders, $orders_type){
 }
 
 // display a table of pending, hold, processing orders
-function nhn_wc_pending_orders_func(){
+function nhn_wc_pending_orders_func($atts){
+
+	extract(shortcode_atts(array(
+      'limit' => -1,
+   ), $atts));
 
 	$orders = wc_get_orders( array(
-    'limit'    => 5,
+    'limit'    => $limit,
     'status'   => array('pending', 'on-hold', 'processing'),
 	) );
 
@@ -100,9 +104,14 @@ function nhn_wc_pending_orders_func(){
 
 add_shortcode('nhn_wc_pending_orders', 'nhn_wc_pending_orders_func');
 
-function nhn_wc_complete_orders_func(){
+function nhn_wc_complete_orders_func($atts){
+
+	extract(shortcode_atts(array(
+      'limit' => -1,
+   ), $atts));
+
 	$orders = wc_get_orders( array(
-    'limit'    => 5,
+    'limit'    => $limit,
     'status'   => array('completed'),
 	) );
 

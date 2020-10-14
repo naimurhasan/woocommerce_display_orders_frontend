@@ -15,8 +15,8 @@ Display Woocommerce Orders in Front End
 
 = Main Features =
 
-* Display Processing Orders in front end [nhn_wc_pending_orders]
-* Display Complete Orders in front end [nhn_wc_complete_orders]
+* Display Processing Orders in front end [nhn_wc_pending_orders limit=5]
+* Display Complete Orders in front end [nhn_wc_complete_orders limit=5]
 
 
 
@@ -24,5 +24,7 @@ Display Woocommerce Orders in Front End
 
 * Download and install using the built in WordPress plugin installer.
 
-* Use shortcode where you want to display in fron-end [nhn_wc_complete_orders] or [nhn_wc_pending_orders]
+* Use shortcode where you want to display in fron-end [nhn_wc_complete_orders limit=5] or [nhn_wc_pending_orders limit=5]
+
+* You can remove limit attribute to show unlimited eg [nhn_wc_pending_orders] shows all pending orders
 
