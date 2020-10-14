@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Display Woocommerce Orders in Front-end
  * Plugin URI:  https://github.com/naimurhasan/woocommerce_display_orders_frontend
- * Description: One click Link folder with category of uploaded media
+ * Description: Display Woocommerce Orders in Front-End by weblywork.com
  * Version: 1.0
  * Author: WeblyWork
  * Author URI: https://weblywork.com/
