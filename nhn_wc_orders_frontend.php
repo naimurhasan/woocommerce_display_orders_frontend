@@ -3,7 +3,7 @@
  * Plugin Name: Display WC Orders in Front-end
  * Plugin URI:  https://github.com/naimurhasan/woocommerce_display_orders_frontend
  * Description: Display Woocommerce Orders in Front-End by weblywork.com
- * Version: 1.0
+ * Version: 1.5
  * Author: WeblyWork
  * Author URI: https://weblywork.com/
  * Display Woocommerce Orders in Front-end is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ function nhn_output_table_start($orders_type){
 		.nhn_wc_display_div table,
 		.nhn_wc_display_div table th,
 		.nhn_wc_display_div table td,
-		.nhn_wc_display_div table tr \{
+		.nhn_wc_display_div table tr {
 		    border: 2px solid #dee2e6;    
 		}
 	</style>
@@ -71,14 +71,12 @@ function show_orders_table($orders, $orders_type){
 
 				$total_amount = $order->data['total'].'/=';
 
-				$order_id =  $order->data['id'];
-				$first_product_name = current($order->get_items())->get_name();
-				$customer_name = $order->data['billing']['first_name'].' '.$order->data['billing']['last_name'];
-				$pay_method = $order->data['payment_method_title'];
-
-				$ordered_date = date_format($orders_type == 'completed' ? $order->get_date_completed() : $order->get_date_created(), 'd M, Y');
-
-				$total_amount = $order->data['total'].'/=';
+				$order_id =  esc_html($order_id);
+				$first_product_name = esc_html($first_product_name);
+				$customer_name = esc_html($customer_name);
+				$pay_method = esc_html($pay_method);
+				$ordered_date = esc_html($ordered_date);
+				$total_amount = esc_html($total_amount);
 
 			} catch(Error $e){
 				$order_id =  rand(4651, 9653);
@@ -151,7 +149,7 @@ function nhn_wc_complete_orders_func($atts){
 
 	
 	$output = '';
-	$output .=  nhn_output_table_start('complete');
+	$output .=  nhn_output_table_start('completed');
 	$output .=  show_orders_table($orders, 'completed');
 	$output .=  nhn_output_table_end();
 	return $output;
